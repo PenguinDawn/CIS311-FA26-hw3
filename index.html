@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Contact form</title>
 
@@ -15,38 +19,82 @@
   </style>
 </head>
 <body>
+  <form>
+    <h1>Contact Us</h1>
 
-  Contact Us
+    <fieldset class="field">
+      <label for="firstname">First Name <span class="green">*</span></label>
+      <input type="text" name="firstname" required/>
+      <p class="alert" id="alert1">This field is required</p>
+    </fieldset>
 
-  First Name
-  This field is required
+    <fieldset class="field">
+      <label for="lastname">Last Name <span class="green">*</span></label>
+      <input type="text" name="lastname" required/>
+      <p class="alert" id="alert2">This field is required</p>
+    </fieldset>
 
-  Last Name
-  This field is required
+    <fieldset class="field">
+      <label for="email">Email Address <span class="green">*</span></label>
+      <input type="email" name="email" required/>
+      <p class="alert">Please enter a valid email address</p>
+      <p class="alert" id="alert3">This field is required</p>
+    </fieldset>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+    <fieldset class="field">
+      <label>Query Type<span class="green">*</span></label>
+      <input type="checkbox" name="querytype" value="general"/>
+      <label for="general">General Enquiry</label>
+      <input type="checkbox" name="querytype" value="support"/>
+      <label for="support">Support Request</label>
+     
+      <p class="alert" id="alert2">Please select a query type</p>
+    </fieldset>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+    <fieldset class="field">
+      <label for="message">Message</label>
+      <textarea required></textarea>
 
-  Message
-  This field is required
+      <p class="alert" id="alert2">This field is required</p>
+    </fieldset>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+    <fieldset class="field">
+      <input type="checkbox" value="consent" required />
+      <label for="consent">I consent to being contacted by the team <span class="green">*</span></label>
+     
 
-  Submit
+      <p class="alert" id="alert2">To submit this form, please consent to being contacted</p>
+    </fieldset>
+    
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+
+    <button type="submit" id="submitButton">Submit</button>
+
+    
+
+  </form>
+
+
+  
+  
+
+
+  <div id="alert" popover="manual" role="status">
+    <div class="inline">
+      <img src="./assets/images/icon-success-check.svg"/>
+      <h4 class="alert-head">Message Sent!</h4>
+    </div>
+    
+    <p class="alert-body">Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  
+  
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

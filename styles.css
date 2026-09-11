@@ -1,0 +1,72 @@
+:root {
+    --lightgreen: hsl(148, 38%, 91%);
+    --mediumgreen: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+    --white: hsl(0, 0%, 100%);
+    --mediumgray: hsl(186, 15%, 59%);
+    --darkgray: hsl(187, 24%, 22%);
+}
+
+/* Styles for all of it */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--lightgreen);
+}
+
+h1, h2, h3, p, label, span, input {
+    font-family: "Karla", sans-serif;
+}
+
+/* Popover */
+
+#alert {
+    background-color: var(--darkgray);
+    left: 50%;
+    top: 2rem;
+    margin: 0;
+    border: none;
+    position: fixed;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.alert-head {
+    color: white;
+    font-weight: 700;
+}
+
+.alert-body {
+    padding-top: 0.75rem;
+    color: var(--lightgreen);
+    font-weight: 300;
+}
+
+.inline {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+/* Form styles */
+
+form {
+    background-color: var(--white);
+    margin-inline: auto;
+    margin-top: 5%;
+    width: 50%;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.green {
+    color: var(--mediumgreen);
+}
+
+.field {
+    border: none;
+}
